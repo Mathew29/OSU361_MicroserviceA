@@ -11,7 +11,7 @@ def get_username():
     try:
 
         url = 'https://usernameapiv1.vercel.app/api/random-usernames'
-        r = requests.get(url)
+        r = requests.get(url, timeout=10)
         username = r.json()
         return username['usernames'][0]
     except requests.exceptions.RequestException as err:

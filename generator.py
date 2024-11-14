@@ -1,7 +1,7 @@
-import zmq
+from pprint import pprint
 import time
 import json
-from pprint import pprint
+import zmq
 import get_username
 import get_password
 

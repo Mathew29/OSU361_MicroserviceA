@@ -1,5 +1,5 @@
-import requests
 from typing import Optional
+import requests
 
 
 def get_password(uppercase: bool, lowercase: bool, special: bool, numbers: bool, length: Optional[int] = None):
@@ -25,7 +25,7 @@ def get_password(uppercase: bool, lowercase: bool, special: bool, numbers: bool,
     if numbers:
         params["numbers"] = "numbers"
     try:
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, timeout=10)
         if response.status_code == 200:
             password = response.json()
             return password['password']

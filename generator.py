@@ -9,7 +9,7 @@ import get_password
 def main():
     context = zmq.Context()
     socket = context.socket(zmq.REP)
-    socket.bind("tcp://*:5600")
+    socket.bind("tcp://127.0:5600")
     print("Server started, waiting for requests...", flush=True)
     try:
         while True:

@@ -13,7 +13,7 @@ This microservice generates upon request, a username and password using ZeroMQ.
 Clone the repository to your local machine
 ```bash
 git clone https://github.com/Mathew29/OSU361_MicroserviceA.git
-cd OSU361_MicroserviceA/
+cd OSU361_MicroserviceA/src
 ```
 
 ## How to run

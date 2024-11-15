@@ -6,6 +6,7 @@ This microservice generates upon request, a username and password using ZeroMQ.
 - **pip**
 - **requests**
 - **zmq**
+- **typing**
 
 
 ## Installation

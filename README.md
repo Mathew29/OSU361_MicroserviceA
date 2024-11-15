@@ -34,10 +34,7 @@ Run the application
 python generator.py
 ```
 
-## Example of Requesting and Receiving Code
-To receive messages from this microservice, you must connect using ZeroMQ subscriber on tcp://123.0.0.1:5600. 
-
-Example of JSON message to send to this microservice:
+## Example of JSON messages to send to this microservice below:
 ```json
 {
 'username': False,
@@ -51,6 +48,44 @@ Example of JSON message to send to this microservice:
     }
 }
 ```
+```json
+{
+'username': True,
+}
+```
+```json
+{
+'password': {
+    'generatePassword': True,
+    'special': True,
+    'lowercase': True,
+    'uppercase': True,
+    'numbers': True,
+    'length': 16
+    }
+}
+```
+
+## Example of Requesting and Receiving Code
+To receive messages from this microservice, you must connect using ZeroMQ on tcp://123.0.0.1:5600. 
+
+Example call to Request and Receive username and password
+```python
+import json
+import zmq
+
+context = zmq.Context()
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://127.0.0.1:5600")
+
+// create a JSON object formatted similar to the above examples
+
+msg = json.dumps(jsonObject)
+socket.send(packet_json.encode('utf-8'))
+
+response = socket.recv().decode('utf-8)
+```
+
 
 
 

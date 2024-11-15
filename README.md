@@ -39,29 +39,29 @@ python generator.py
 {
 'username': False,
 'password': {
-    'generatePassword': True,
-    'special': True,
-    'lowercase': True,
-    'uppercase': True,
-    'numbers': True,
-    'length': 16
+    "generatePassword": True,
+    "special": True,
+    "lowercase": True,
+    "uppercase": True,
+    "numbers": True,
+    "length": 16
     }
 }
 ```
 ```json
 {
-'username': True,
+"username": True,
 }
 ```
 ```json
 {
-'password': {
-    'generatePassword': True,
-    'special': True,
-    'lowercase': True,
-    'uppercase': True,
-    'numbers': True,
-    'length': 16
+"password": {
+    "generatePassword": True,
+    "special": True,
+    "lowercase": True,
+    "uppercase": True,
+    "number": True,
+    "length": 16
     }
 }
 ```

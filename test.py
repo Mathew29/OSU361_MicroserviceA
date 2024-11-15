@@ -3,6 +3,8 @@ import zmq
 
 
 context = zmq.Context()
+
+print("Connecting to server…")
 socket = context.socket(zmq.REQ)
 socket.connect("tcp://127.0.0.1:5600")
 

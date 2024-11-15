@@ -87,6 +87,10 @@ socket.send(packet_json.encode('utf-8'))
 response = socket.recv().decode('utf-8)
 ```
 
+## UML Diagram
+![image](https://github.com/user-attachments/assets/f8f43bb5-8ee0-4787-b8f0-a7e41f5b23ed)
+
+
 
 
 

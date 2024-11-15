@@ -78,7 +78,7 @@ context = zmq.Context()
 socket = context.socket(zmq.REQ)
 socket.connect("tcp://127.0.0.1:5600")
 
-// create a JSON object formatted similar to the above examples
+# create a JSON object formatted similar to the above examples
 
 msg = json.dumps(jsonObject)
 socket.send(packet_json.encode('utf-8'))

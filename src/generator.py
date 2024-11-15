@@ -2,8 +2,8 @@ from pprint import pprint
 import time
 import json
 import zmq
-import get_username
-import get_password
+import src.get_username as get_username
+import src.get_password as get_password
 
 
 def main():

@@ -37,30 +37,30 @@ python generator.py
 ## Example of JSON messages to send to this microservice below:
 ```json
 {
-"username": False,
+"username": false,
 "password": {
-    "generatePassword": True,
-    "special": True,
-    "lowercase": True,
-    "uppercase": True,
-    "numbers": True,
+    "generatePassword": true,
+    "special": true,
+    "lowercase": true,
+    "uppercase": true,
+    "numbers": true,
     "length": 16
     }
 }
 ```
 ```json
 {
-"username": True,
+"username": true,
 }
 ```
 ```json
 {
 "password": {
-    "generatePassword": True,
-    "special": True,
-    "lowercase": True,
-    "uppercase": True,
-    "number": True,
+    "generatePassword": true,
+    "special": true,
+    "lowercase": true,
+    "uppercase": true,
+    "number": true,
     "length": 16
     }
 }

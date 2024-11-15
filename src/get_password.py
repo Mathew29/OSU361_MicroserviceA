@@ -2,7 +2,7 @@ from typing import Optional
 import requests
 
 
-def get_password(uppercase: bool, lowercase: bool, special: bool, numbers: bool, length: Optional[int] = None):
+def get_password(uppercase: Optional[bool] = True, lowercase: Optional[bool] = True, special: Optional[bool] = True, numbers: Optional[bool] = True, length: Optional[int] = None):
     """
     Password generator that requests a random password from a open source API.
     API: https://api.genratr.com

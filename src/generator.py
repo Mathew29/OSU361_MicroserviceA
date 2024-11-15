@@ -2,8 +2,8 @@ from pprint import pprint
 import time
 import json
 import zmq
-import src.get_username as get_username
-import src.get_password as get_password
+from get_username import get_username
+from get_password import get_password
 
 
 def main():
@@ -21,15 +21,15 @@ def main():
                 pprint(f"Decoded JSON: {data}")
                 username = ''
                 password = {}
-                if data['username']:
+                if 'username' in data and data['username']:
                     print('Generating a username...')
-                    username = get_username.get_username()
-                if data['password']['generatePassword']:
-
-                    pw = data['password']
-                    print('Generating a password')
-                    password = get_password.get_password(
-                        pw['length'], pw['uppercase'], pw['lowercase'], pw['special'], pw['numbers'])
+                    username = get_username()
+                if 'password' in data and isinstance(data['password'], dict):
+                    if data['password']['generatePassword']:
+                        pw = data['password']
+                        print('Generating a password')
+                        password = get_password(
+                            pw['length'], pw['uppercase'], pw['lowercase'], pw['special'], pw['numbers'])
 
                 result = {
                     "username": username,
